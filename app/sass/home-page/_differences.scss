@@ -1,9 +1,11 @@
 .differences {
   padding: 55px 0 115px 0;
+  @include breakpoint(max-width 660px){
+    padding: 55px 0 0 0;
+  }
 
   &__inner {
-    margin: 0 auto;
-    width: 1140px;
+    width: 100%;
     h4 {
       color: #222221;
       font-family: $museo-medium;
@@ -22,11 +24,13 @@
     display: flex;
     position: relative;
     padding-bottom: 30px;
+    flex-wrap: wrap;
   }
 
   &__btn {
     text-transform: uppercase;
-    font-family: "MuseoSansMedium";
+    font-family: $museo-bold;
+    text-shadow: 0 1px 0 #c99040;
     font-size: 13px;
     color: #ffffff;
     width: 180px;
@@ -53,7 +57,10 @@
 
   &__section {
     width: 50%;
-    padding: 35px;
+    padding: 20px;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
 
     h5 {
       font-size: 23px;

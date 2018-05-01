@@ -12,13 +12,15 @@
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
+    @include breakpoint(max-width 660px){
+      top: -312px;
+    }
   }
 
   &__inner {
     padding: 40px 0 0 0;
     position: relative;
     z-index: 3;
-
     h4 {
       color: #fff;
       font-family: $museo-medium;
@@ -34,7 +36,14 @@
   &__item-wrap {
     display: flex;
     height: 165px;
+    position: relative;
     justify-content: flex-end;
+    @include breakpoint(max-width 1200px){
+      justify-content: space-around;
+      height: auto;
+      padding: 0 0 30px 0;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -42,6 +51,9 @@
     justify-content: flex-start;
     align-items: center;
     margin-right: 20px;
+    @include breakpoint(max-width 1200px){
+      margin-top: 20px;
+    }
   }
 
   &__item-ico-wrap {
