@@ -1,0 +1,193 @@
+.footer {
+  &__inner {
+    width: 100%;
+    position: relative;
+    p{
+      margin-bottom: 0;
+    }
+  }
+  &__copyright{
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.26px;
+  }
+  &__copy-wrap {
+    background-color: #252a2d;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 13px;
+      color: #ffffff;
+      font-family: "MuseoSansLight";
+      text-align: center;
+    }
+  }
+
+  &__info-wrap {
+    background-color: #343c40;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  &__phone {
+    font-size: 19px;
+    color: #fff;
+    font-family: $museo-black;
+    margin-left: 25px;
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.38px;
+    &:visited{
+      color: #fff;
+    }
+    &:active{
+      color: #fff;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 2px;
+      left: -25px;
+      background: url('../img/icons/phone-receiver.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  &__polit {
+    margin: 0 0 0 25px;
+    display: inline-block;
+    color: #fff;
+    font-family: $museo-light;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    text-decoration: underline;
+    &:hover{
+      color: #fff;
+    }
+  }
+
+  &__location {
+    font-size: 15px;
+    color: #fff;
+    font-family: $museo-light;
+    margin-left: 15px;
+    position: relative;
+    width: 230px;
+    margin-bottom: 0;
+    letter-spacing: 0.3px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 2px;
+      left: -25px;
+      background: url('../img/icons/maps-and-flags2.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  &__design-by {
+    font-size: 12px;
+    color: #fff;
+    font-family: $museo-light;
+    margin-right: 55px;
+    position: relative;
+    width: 60px;
+    text-align: right;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -51px;
+      top: -10px;
+      width: 41px;
+      height: 44px;
+      background-image: url('../img/ruso-logo.png');
+    }
+  }
+
+  &__email {
+    font-size: 15px;
+    color: #fff;
+    font-family: $museo-bold;
+    position: relative;
+    margin-bottom: 0;
+    letter-spacing: 0.3px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -25px;
+      width: 17px;
+      height: 17px;
+      top: 2px;
+      background: url('../img/icons/mail-orange.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  &__email-link {
+    font-family: $museo-light;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  &__schedule {
+    font-size: 15px;
+    color: #fff;
+    font-family: $museo-light;
+    margin-top: 3px;
+    margin-bottom: 0;
+    letter-spacing: 0.3px;
+  }
+
+  &__schedule-title {
+    font-size: 15px;
+    font-family: $museo-bold;
+    color: #fff;
+    position: relative;
+    margin-bottom: 0;
+    letter-spacing: 0.3px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 2px;
+      left: -25px;
+      background: url('../img/icons/clock-circular.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  a{
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+

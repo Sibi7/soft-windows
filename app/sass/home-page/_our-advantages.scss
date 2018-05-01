@@ -1,0 +1,70 @@
+.our-advantages {
+  position: relative;
+
+  &__bg {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: -150px;
+    background-image: url('../img/our-advantages-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  &__inner {
+    padding: 40px 0 0 0;
+    position: relative;
+    z-index: 3;
+
+    h4 {
+      color: #fff;
+      font-family: $museo-medium;
+      font-size: 44px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    height: 165px;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__item-ico-wrap {
+    margin-right: 12px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-image: url('../img/our-advantages-item-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-ico {
+    width: 45%;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    color: #fff;
+    font-family: $museo-bold;
+    width: 150px;
+    line-height: 1.3;
+
+  }
+}

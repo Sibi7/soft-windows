@@ -1,0 +1,44 @@
+.home {
+  background: url('../img/home-bg.jpg') no-repeat top center;
+  background-size: cover;
+  &__inner {
+    height: 490px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    @include breakpoint(max-width 992px){
+      height: auto;
+      padding: 50px 0;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 62px;
+      color: #fff9ea;
+      font-family: $museo-black;
+      text-shadow: 0 9px 19px rgba(0, 0, 0, 0.36);
+      margin: 0;
+      letter-spacing: 1.24px;
+    }
+
+    h2 {
+      font-family: $museo-bold;
+      color: #fff;
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 0.96px;
+    }
+
+    h3 {
+      font-family: $museo-medium;
+      color: #fff;
+      font-size: 31px;
+      margin-top: 10px;
+      letter-spacing: 0.62px;
+
+
+    }
+  }
+}

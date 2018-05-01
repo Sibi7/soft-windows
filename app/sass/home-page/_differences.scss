@@ -1,0 +1,114 @@
+.differences {
+  padding: 55px 0 115px 0;
+
+  &__inner {
+    margin: 0 auto;
+    width: 1140px;
+    h4 {
+      color: #222221;
+      font-family: $museo-medium;
+      font-size: 44px;
+      text-align: center;
+      margin-bottom: 60px;
+      letter-spacing: 0.88px;
+    }
+  }
+
+  &__list {
+    background-color: #f6f7f8;
+    display: flex;
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-family: "MuseoSansMedium";
+    font-size: 13px;
+    color: #ffffff;
+    width: 180px;
+    height: 48px;
+    background-image: url('../img/offer-btn-bg.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0px 5px 14px 0px rgba(0, 0, 1, 0.2);
+    margin: 0 auto;
+    position: absolute;
+    left: calc(50% - 90px);
+    bottom: -24px;
+    text-shadow: 0px 1px 0px rgba(201, 144, 64, 0.004);
+    transition: 200ms ease;
+
+    &:hover {
+      transition: 200ms ease;
+      color: #fff;
+      background-image: url('../img/offer-btn-bg-hover.png');
+    }
+  }
+
+  &__section {
+    width: 50%;
+    padding: 35px;
+
+    h5 {
+      font-size: 23px;
+      color: #222221;
+      font-family: "MuseoSansBold";
+    }
+
+    h6 {
+      font-family: $museo-black;
+      color: #353b3e;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 40px 0 0 70px;
+      letter-spacing: 0.46px;
+    }
+
+    p {
+      color: #222221;
+      font-size: 15px;
+      font-family: $museo-light;
+      margin: 20px 0 0 70px;
+      line-height: 1.5;
+    }
+
+    &--ours {
+      h6 {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 27px;
+          height: 27px;
+          top: -5px;
+          left: -40px;
+          background: url('../img/icons/completed-ico.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+
+    &--other {
+      h6 {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 27px;
+          height: 27px;
+          top: -5px;
+          left: -40px;
+          background: url('../img/icons/cancel-ico.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

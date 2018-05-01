@@ -1,0 +1,46 @@
+$museo-black: 'MuseoSansBlack';
+$museo-bold: 'MuseoSansBold';
+$museo-medium: 'MuseoSansMedium';
+$museo-regular: 'MuseoSansRegular';
+$museo-light: 'MuseoSansLight';
+
+@font-face {
+  font-family: 'MuseoSansBlack';
+  src: url('../fonts/MuseoSansBlack/MuseoSansBlack.eot');
+  src: local('☺'), url('../fonts/MuseoSansBlack/MuseoSansBlack.woff')
+  format('woff'), url('../fonts/MuseoSansBlack/MuseoSansBlack.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansBold';
+  src: url('../fonts/MuseoSansBold/MuseoSansBold.eot');
+  src: local('☺'), url('../fonts/MuseoSansBold/MuseoSansBold.woff')
+  format('woff'), url('../fonts/MuseoSansBold/MuseoSansBold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansMedium';
+  src: url('../fonts/MuseoSansMedium/MuseoSansMedium.eot');
+  src: local('☺'), url('../fonts/MuseoSansMedium/MuseoSansMedium.woff')
+  format('woff'), url('../fonts/MuseoSansMedium/MuseoSansMedium.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansRegular';
+  src: url('../fonts/MuseoSansRegular/MuseoSansRegular.eot');
+  src: local('☺'), url('../fonts/MuseoSansRegular/MuseoSansRegular.woff')
+  format('woff'), url('../fonts/MuseoSansRegular/MuseoSansRegular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansLight';
+  src: url('../fonts/MuseoSansLight/MuseoSansLight.eot');
+  src: local('☺'), url('../fonts/MuseoSansLight/MuseoSansLight.woff')
+  format('woff'), url('../fonts/MuseoSansLight/MuseoSansLight.ttf');
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,0 +1,118 @@
+.nav {
+  background-color: #fff;
+  @include breakpoint(max-width 660px){
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid #edf2f4;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    @include breakpoint(max-width 992px){
+      flex-wrap: wrap;
+      justify-content: center;
+      display: flex;
+    }
+    @include breakpoint(max-width 660px){
+      display: none;
+
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    @include breakpoint(max-width 992px){
+      flex-grow: inherit;
+
+    }
+    @include breakpoint(max-width 660px){
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    text-decoration: none;
+    font-family: $museo-bold;
+    font-size: 12px;
+    color: #222425;
+    text-transform: uppercase;
+    transition: 0.2s;
+    @include breakpoint(max-width 992px){
+      justify-content: flex-start;
+      margin-right: 20px;
+      height: auto;
+      padding: 10px 0;
+    }
+    @include breakpoint(max-width 660px){
+      margin-right: 0;
+      text-align: center;
+      display: block;
+      padding: 15px 0;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #00a2e6;
+    }
+  }
+}
+.menu-link {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+  position: fixed;
+  right: 12px;
+  z-index: 15;
+  top: 13px;
+  @include breakpoint(max-width 660px) {
+    display: block;
+  }
+  span, span:before, span:after {
+    display: block;
+    height: 2px;
+    width: 18px;
+    background-color: #222;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -1px;
+  }
+  span:before {
+    transition: all 0.2s;
+    margin-top: -6px;
+    content: '';
+  }
+  span:after {
+    transition: all 0.2s;
+    margin-top: 4px;
+    content: '';
+  }
+  &_active span {
+    background-color: transparent;
+    &:before {
+      transform: rotate(135deg);
+      margin-top: 0;
+    }
+    &:after {
+      transform: rotate(-134deg);
+      margin-top: 0;
+    }
+  }
+}

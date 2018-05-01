@@ -1,0 +1,240 @@
+.offer {
+  background: url('../img/offer-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  &__inner {
+    padding: 40px 0 35px 0;
+
+    h4 {
+      color: #222221;
+      font-family: $museo-medium;
+      font-size: 44px;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: 0.88px;
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    display: flex;
+    @include breakpoint(max-width 992px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &:nth-child(odd) {
+      padding-left: 10px;
+      @include breakpoint(max-width 992px){
+        padding-left: 0;
+      }
+      .offer__item-right{
+        @include breakpoint(max-width 992px){
+          order: 1;
+        }
+      }
+      .offer__item-preview-wrap {
+        margin-left: 0;
+        margin-right: 2px;
+      }
+    }
+  }
+  &__meta-tags {
+    display: block;
+    color: #54585d;
+    font-family: $museo-light;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+  }
+  &__item-right {
+    padding: 30px 65px 30px 30px;
+    @include breakpoint(max-width 992px){
+      padding: 30px;
+    }
+    @include breakpoint(max-width 660px){
+      padding: 20px;
+    }
+    h5 {
+      margin-top: 0;
+      font-size: 23px;
+      color: #222221;
+      font-family: $museo-bold;
+      margin-bottom: 20px;
+      letter-spacing: 0.46px;
+    }
+    p {
+      font-size: 15px;
+      color: #222221;
+      font-family: $museo-light;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+      @include breakpoint(max-width 992px){
+        text-align: justify;
+      }
+    }
+  }
+
+  &__item-left {
+    display: flex;
+    width: 450px;
+    @include breakpoint(max-width 992px){
+      flex-wrap: wrap;
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__item-img {
+    vertical-align: top;
+    height: 100%;
+    width: auto;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-preview-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2px;
+  }
+
+  &__item-preview {
+    vertical-align: top;
+  }
+
+  &__item-big-link {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    @include breakpoint(max-width 992px){
+      width: calc(100% - 99px);
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(#2a3c44, .70);
+      opacity: 0;
+      transition: 0.2s;
+      background-image: url('../img/magnifying-glass-zoom-in.svg');
+      background-size: 44px 44px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 4px solid #dfe1e1;
+      top: 16px;
+      right: 16px;
+      left: 16px;
+      bottom: 16px;
+      opacity: 0;
+      transition: 0.2s;
+    }
+  }
+
+  &__item-preview-link {
+    cursor: pointer;
+    position: relative;
+    outline: none;
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(#2a3c44, .70);
+      opacity: 0;
+      transition: 0.2s;
+      background-image: url('../img/magnifying-glass-zoom-in.svg');
+      background-size: 27px 27px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 2px solid #dfe1e1;
+      top: 4px;
+      right: 4px;
+      left: 4px;
+      bottom: 4px;
+      opacity: 0;
+      transition: 0.2s;
+    }
+  }
+
+  &__item-btn {
+    text-transform: uppercase;
+    font-family: $museo-bold;
+    text-shadow: 0 1px 0 #c99040;
+    font-size: 13px;
+    color: #ffffff;
+    width: 180px;
+    height: 48px;
+    background-image: url('../img/offer-btn-bg.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0px 5px 14px 0px rgba(0, 0, 1, 0.2);
+    margin-top: 20px;
+    transition: 200ms ease;
+    @include breakpoint(max-width 992px){
+      margin: 10px auto 0 auto;
+    }
+    &:hover {
+      background-image: url('../img/offer-btn-bg-hover.png');
+      transition: 200ms ease;
+      color: #fff;
+    }
+  }
+
+  &__item-img {
+    vertical-align: top;
+  }
+
+}

@@ -1,0 +1,325 @@
+.header {
+  background: linear-gradient(110deg,#fff 65%,#f3f7f9 0);
+  border-bottom: 3px solid #00a2e6;
+
+  &__inner {
+    width: 100%;
+    height: 114px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include breakpoint(max-width 992px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: auto;
+      margin-top: 10px;
+    }
+    @include breakpoint(max-width 480px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 195px;
+    position: relative;
+    @include breakpoint(max-width 660px){
+      margin-top: 3px;
+    }
+    @include breakpoint(max-width 480px){
+      margin-right: 200px;
+    }
+    @include breakpoint(max-width 420px){
+      margin-right: 0;
+      margin-top: 7px;
+      width: 160px;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__contacts {
+    text-align: right;
+    margin-left: 190px;
+    @include breakpoint(max-width 1200px) {
+      margin-left: 75px;
+    }
+    @include breakpoint(max-width 992px) {
+      margin-left: 0;
+    }
+    @include breakpoint(max-width 660px) {
+      margin-right: 70px;
+    }
+    @include breakpoint(max-width 480px) {
+      margin-right: 0;
+      text-align: left;
+      margin-top: 10px;
+    }
+    @include breakpoint(max-width 420px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__contacts-phone {
+    font-size: 19px;
+    color: #040000;
+    font-family: $museo-black;
+    margin-bottom: 0;
+    letter-spacing: 0.38px;
+    &:hover {
+      color: #040000;
+    }
+    &:visited{
+      color: #040000;
+    }
+    &:active{
+      color: #040000;
+    }
+  }
+
+  &__contacts-graph {
+    font-size: 13px;
+    color: #4f5456;
+    font-family: $museo-light;
+    margin-bottom: 0;
+    letter-spacing: 0.26px
+  }
+
+  &__request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 23px;
+    @include breakpoint(max-width 992px) {
+      margin-left: 0;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 50%;
+      align-items: baseline;
+      justify-content: flex-start;
+      margin: 10px 0;
+    }
+    @include breakpoint(max-width 480px) {
+      width: auto;
+      align-items: baseline;
+      justify-content: flex-start;
+      margin: 10px 0;
+    }
+    @include breakpoint(max-width 420px) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__request-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    width: 180px;
+    height: 40px;
+    font-family: $museo-bold;
+    background-color: #ffb400;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #ff9000;
+      color: #fff;
+    }
+  }
+
+  &__request-geo {
+    font-size: 13px;
+    line-height: 18px;
+    color: #127daa;
+    font-family: $museo-medium;
+    margin-top: 7px;
+    padding-left: 15px;
+    background-image: url('../img/icons/maps-and-flags.svg');
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    background-size: 14px;
+    letter-spacing: 0.26px;
+    text-decoration: underline;
+  }
+
+  &__status {
+    margin-left: auto;
+    @include breakpoint(max-width 992px) {
+      margin: 10px auto;
+      width: 100%;
+    }
+    @include breakpoint(max-width 660px) {
+      margin: 10px 0;
+      width: auto;
+    }
+    @include breakpoint(max-width 574px) {
+      width: 50%;
+    }
+    @include breakpoint(max-width 480px) {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__status-ico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: #ffb400;
+    font-size: 12px;
+    margin-left: 5px;
+    color: #040000;
+    font-family: $museo-bold;
+    cursor: pointer;
+    transition: 0.2s;
+    font-style: normal;
+    &:hover {
+      background-color: #00a2e6;
+      color: #fff;
+
+      & + .header__status-prompt {
+        display: block;
+      }
+    }
+  }
+
+  &__status-prompt {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    font-size: 12px;
+    color: #343434;
+    font-family: $museo-medium;
+    background-color: #fcf7eb;
+    width: 280px;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0px 6px 14px 0px rgba(0, 0, 1, 0.26);
+    top: 27px;
+
+    &:hover {
+      display: block;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 10px solid transparent;
+      border-bottom: 10px solid #fcf7eb;
+      top: -20px;
+      right: 52px;
+    }
+  }
+
+  &__status-form {
+    display: flex;
+  }
+
+  &__status-caption {
+    font-size: 13px;
+    color: #040000;
+    font-family: $museo-bold;
+    margin-bottom: 7px;
+    position: relative;
+    letter-spacing: 0.26px;
+    @include breakpoint(max-width 992px) {
+      text-align: center;
+    }
+    @include breakpoint(max-width 660px) {
+      text-align: right;
+    }
+    @include breakpoint(max-width 480px) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__status-input-wrap {
+    position: relative;
+
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
+    @include breakpoint(max-width 660px){
+    width: auto;
+  }
+    @include breakpoint(max-width 480px){
+      width: 100%;
+    }
+
+    &:before {
+      content: '№';
+      position: absolute;
+      display: block;
+      width: 25px;
+      height: 100%;
+      text-align: right;
+      left: 0;
+      top: 0;
+      line-height: 32px;
+      font-size: 13px;
+      color: #646363;
+      font-family: $museo-light;
+    }
+  }
+
+  &__status-input {
+    outline: none;
+    width: 190px;
+    height: 32px;
+    border: 1px solid #cfd2d4;
+    border-right: none;
+    padding-left: 30px;
+    font-size: 13px;
+    color: #646363;
+    font-family: $museo-light;
+    &::placeholder{
+      opacity: 1;
+    }
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
+    @include breakpoint(max-width 660px){
+      width: 185px;
+    }
+    @include breakpoint(max-width 574px){
+      width: 100%;
+    }
+  }
+
+  &__status-btn {
+    background-color: #00a2e6;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 32px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 11px;
+    font-family: $museo-medium;
+    text-transform: uppercase;
+    transition: 0.2s;
+    padding: 0;
+
+    &:hover {
+      background: darken(#00a2e6, 10%);
+      color: #fff;
+    }
+  }
+}
