@@ -34,6 +34,14 @@
     @include breakpoint(max-width 1200px){
       height: 565px;
     }
+    @include breakpoint(max-width 992px){
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      justify-content: space-between;
+      height: auto;
+    }
+
   }
 
   &__circle {
@@ -55,10 +63,7 @@
       left: calc(50% - 110px);
     }
     @include breakpoint(max-width 992px) {
-
-    }
-    @include breakpoint(max-width 660px) {
-
+      display: none;
     }
 
     &:before {
@@ -90,6 +95,24 @@
     position: absolute;
     @include breakpoint(max-width 992px){
       position: relative;
+      right: inherit!important;
+      left: inherit!important;
+      top: inherit!important;
+      bottom: inherit!important;
+      width: 48%!important;
+      text-align: left!important;
+      @include breakpoint(max-width 992px){
+        margin-bottom: 30px;
+      }
+      @include breakpoint(max-width 660px){
+        width: 100%!important;
+
+      }
+    }
+    p{
+      @include breakpoint(max-width 992px){
+        text-align: left;
+      }
     }
     &--paper {
       padding-right: 64px;
@@ -102,6 +125,11 @@
       right: calc(50% + 100px);
       @include breakpoint(max-width 1200px) {
         right: calc(50% + 40px);
+      }
+      @include breakpoint(max-width 992px){
+        padding-left: 70px;
+        padding-right: 0;
+        background-position: left top;
       }
     }
 
@@ -123,9 +151,7 @@
 
     &--palette {
       padding-right: 70px;
-      background-image: url('../img/icons/painting-palette.svg');
-      background-repeat: no-repeat;
-      background-position: right top;
+      background: url('../img/icons/painting-palette.svg') no-repeat right top;
       text-align: right;
       width: 335px;
       top: 280px;
@@ -133,6 +159,11 @@
       @include breakpoint(max-width 1200px) {
         right: calc(50% + 133px);
         top: 200px;
+      }
+      @include breakpoint(max-width 992px){
+        padding-left: 70px;
+        padding-right: 0;
+        background-position: left top;
       }
     }
 
@@ -149,6 +180,11 @@
         top: 200px;
         left: calc(50% + 133px);
       }
+      @include breakpoint(max-width 992px){
+        padding-left: 70px;
+        padding-right: 0;
+        background-position: left top;
+      }
     }
 
     &--zipper {
@@ -164,10 +200,15 @@
         top: 350px;
         right: calc(50% + 120px);
       }
+      @include breakpoint(max-width 992px){
+        padding-left: 70px;
+        padding-right: 0;
+        background-position: left top;
+      }
     }
 
     &--factory {
-      padding-left: 64px;
+      padding-left: 70px;
       background-image: url('../img/icons/factory.svg');
       background-repeat: no-repeat;
       background-position: left top;
@@ -192,6 +233,25 @@
       left: calc(50% - 155px);
       @include breakpoint(max-width 1200px){
         bottom: 10px;
+      }
+      @include breakpoint(max-width 992px){
+        margin: 0 auto 30px auto;
+        text-align: center!important;
+      }
+      @include breakpoint(max-width 660px){
+
+        text-align: left!important;
+        padding-top: 0;
+        padding-left: 70px;
+        background-position: left top;
+      }
+      p{
+        @include breakpoint(max-width 992px){
+          text-align: center;
+        }
+        @include breakpoint(max-width 660px){
+          text-align: left;
+        }
       }
     }
 
@@ -222,6 +282,9 @@
     background-color: #f3f7f9;
     @include breakpoint(max-width 1440px){
       right: -60px;
+    }
+    @include breakpoint(max-width 660px){
+      display: none;
     }
   }
   &__top-arrow {
