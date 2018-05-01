@@ -9,6 +9,9 @@
       text-align: center;
       margin: 45px 0 35px 0;
       letter-spacing: 0.88px;
+      @include breakpoint(max-width 660px){
+        font-size: 35px;
+      }
     }
 
     p {
@@ -283,7 +286,7 @@
     @include breakpoint(max-width 1440px){
       right: -60px;
     }
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 870px){
       display: none;
     }
   }

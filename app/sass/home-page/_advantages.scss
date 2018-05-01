@@ -1,5 +1,7 @@
 .advantages {
   &__inner {
+    width: 100%;
+    position: relative;
     padding: 55px 0;
     h4 {
       color: #222221;
@@ -7,11 +9,15 @@
       font-size: 44px;
       margin: 0;
       text-align: center;
+      @include breakpoint(max-width 660px){
+        font-size: 35px;
+      }
     }
   }
 
   &__list-wrap {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -25,16 +31,28 @@
     font-size: 15px;
     color: #222221;
     font-family: $museo-light;
-
+    @include breakpoint(max-width 570px) {
+      margin-bottom: 15px;
+    }
     &:last-child {
       margin-bottom: 0;
+      @include breakpoint(max-width 570px) {
+        margin-bottom: 15px;
+      }
     }
+
   }
 
   &__list {
     margin-top: 70px;
     list-style: none;
     padding: 0;
+    @include breakpoint(max-width 570px) {
+      margin-top: 30px;
+    }
+    &:nth-last-of-type(2) {
+      margin-top: 0;
+    }
   }
 
   &__circle {
@@ -45,9 +63,21 @@
     border: 2px solid #ffb400;
     width: 390px;
     height: 390px;
-    margin: 25px auto 0 auto;
+    margin: 90px auto 0 auto;
     position: relative;
-
+    @include breakpoint(max-width 570px) {
+      width: 320px;
+      height: 320px;
+      margin: 60px auto 0 auto;
+    }
+    @include breakpoint(max-width 460px) {
+      width: 220px;
+      height: 220px;
+    }
+    @include breakpoint(max-width 360px) {
+      width: 180px;
+      height: 180px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -63,9 +93,18 @@
   }
   &__part {
     width: 310px;
-
+    @include breakpoint(max-width 1200px) {
+      width: 50%;
+    }
+    @include breakpoint(max-width 570px) {
+      width: 100%;
+    }
     &--center {
       flex-grow: 1;
+      @include breakpoint(max-width 1200px) {
+        order: 1;
+        width: 100%;
+      }
 
       .advantages__item {
         width: 250px;
@@ -76,5 +115,11 @@
         margin-top: 10px;
       }
     }
+  }
+}
+
+.mg-top-xs {
+  @include breakpoint(max-width 570px) {
+    margin-top: 0;
   }
 }

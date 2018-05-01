@@ -14,6 +14,9 @@
       margin-bottom: 40px;
       letter-spacing: 0.88px;
       margin-top: 0;
+      @include breakpoint(max-width 660px){
+        font-size: 35px;
+      }
     }
   }
 
