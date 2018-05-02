@@ -2,11 +2,11 @@
   &__inner {
     width: 100%;
     position: relative;
-    p{
+    p {
       margin-bottom: 0;
     }
   }
-  &__copyright{
+  &__copyright {
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 400;
@@ -26,24 +26,24 @@
       text-align: center;
     }
   }
-&__info-item{
-  @include breakpoint(max-width 992px){
-    width: 50%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    &:last-child{
-      margin-bottom: 0;
+  &__info-item {
+    @include breakpoint(max-width 992px) {
+      width: 50%;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint(max-width 460px) {
+      width: 100%;
     }
   }
-  @include breakpoint(max-width 460px){
-   width: 100%;
-  }
-}
   &__info-wrap {
     background-color: #343c40;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       padding: 20px 0;
     }
   }
@@ -53,12 +53,12 @@
     align-items: center;
     justify-content: space-between;
     height: 100px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       flex-wrap: wrap;
       height: auto;
       justify-content: center;
     }
-    @include breakpoint(max-width 460px){
+    @include breakpoint(max-width 460px) {
       text-align: center;
     }
   }
@@ -73,19 +73,21 @@
     margin-bottom: 0;
     text-transform: uppercase;
     letter-spacing: 0.38px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 100%;
     }
-    @include breakpoint(max-width 460px){
+    @include breakpoint(max-width 460px) {
       width: auto;
     }
-    &:visited{
+    &:visited {
       color: #fff;
     }
-    &:active{
+    &:active {
       color: #fff;
     }
-
+    &:hover {
+      color: #fff;
+    }
     &:before {
       content: '';
       display: block;
@@ -102,16 +104,29 @@
   &__polit {
     margin: 0 0 0 25px;
     display: inline-block;
+    position: relative;
     color: #fff;
     font-family: $museo-light;
     font-size: 13px;
     letter-spacing: 0.26px;
-    text-decoration: underline;
-    @include breakpoint(max-width 992px){
+    text-decoration: none;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      right: 0;
+    }
+    @include breakpoint(max-width 992px) {
       width: 100%;
     }
-    &:hover{
+    &:hover {
       color: #fff;
+      &:before{
+        display: none;
+      }
     }
   }
 
@@ -124,11 +139,11 @@
     width: 230px;
     margin-bottom: 0;
     letter-spacing: 0.3px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       margin-left: 25px;
       width: 100%;
     }
-    @include breakpoint(max-width 460px){
+    @include breakpoint(max-width 460px) {
       width: auto;
     }
     &:before {
@@ -152,7 +167,8 @@
     position: relative;
     width: 60px;
     text-align: right;
-
+    display: block;
+    transition: 200ms ease;
     &:before {
       content: '';
       display: block;
@@ -162,7 +178,23 @@
       width: 41px;
       height: 44px;
       background-image: url('../img/ruso-logo.png');
+      transition: 200ms ease;
+
     }
+    &:active {
+      color: #fff;
+    }
+    &:visited {
+      color: #fff;
+    }
+    &:hover {
+      transition: 200ms ease;
+      color: #ffb400;
+      &:before {
+        background-image: url('../img/ruso-logo2.png');
+      }
+    }
+
   }
 
   &__email {
@@ -172,11 +204,11 @@
     position: relative;
     margin-bottom: 0;
     letter-spacing: 0.3px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       margin-left: 25px;
       width: 100%;
     }
-    @include breakpoint(max-width 460px){
+    @include breakpoint(max-width 460px) {
       width: auto;
     }
     &:before {
@@ -198,9 +230,10 @@
     font-size: 15px;
     margin-top: 10px;
     letter-spacing: 0.3px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 100%;
       margin-left: 25px;
+      margin-top: 0;
     }
   }
 
@@ -211,7 +244,7 @@
     margin-top: 3px;
     margin-bottom: 0;
     letter-spacing: 0.3px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 100%;
       margin-left: 25px;
     }
@@ -224,11 +257,11 @@
     position: relative;
     margin-bottom: 0;
     letter-spacing: 0.3px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 100%;
       margin-left: 25px;
     }
-    @include breakpoint(max-width 460px){
+    @include breakpoint(max-width 460px) {
       width: auto;
     }
     &:before {
@@ -244,10 +277,5 @@
     }
   }
 
-  a{
-    &:hover{
-      color: #fff;
-    }
-  }
 }
 

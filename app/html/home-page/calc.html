@@ -3,10 +3,14 @@
     <div class="container">
         <div class="calc__inner">
             <h4>Рассчет вашего заказа за 5 минут</h4>
-            <form class="calc__form">
-                <input type="text" class="calc__input" placeholder="Ваше имя">
-                <input type="text" class="calc__input" placeholder="Телефон">
-                <button class="calc__btn" type="button">Сделать заказ</button>
+            <form class="calc__form" id="calc-form">
+               <div class="calc__form-wrap">
+                   <input type="text"  name="name" id="name" class="calc__input" placeholder="Ваше имя" >
+               </div>
+               <div class="calc__form-wrap">
+                   <input type="tel" class="calc__input" name="phone" id="phone" placeholder="Телефон" >
+               </div>
+                <button class="calc__btn" type="submit">Сделать заказ</button>
             </form>
         </div>
     </div>

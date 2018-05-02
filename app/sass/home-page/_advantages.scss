@@ -95,8 +95,9 @@
     width: 310px;
     @include breakpoint(max-width 1200px) {
       width: 50%;
+      padding-right: 15px;
     }
-    @include breakpoint(max-width 570px) {
+    @include breakpoint(max-width 600px) {
       width: 100%;
     }
     &--center {
@@ -119,7 +120,7 @@
 }
 
 .mg-top-xs {
-  @include breakpoint(max-width 570px) {
+  @include breakpoint(max-width 600px) {
     margin-top: 0;
   }
 }

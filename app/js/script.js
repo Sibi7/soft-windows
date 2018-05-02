@@ -26,5 +26,27 @@ $(document).ready(function () {
         $('html,body').animate({scrollTop: top}, 1000);
         return false;
     });
-
+    jQuery(function($){
+        $("#phone").mask("+7 (999) 999-9999");
+    });
+    $("#calc-form").validate({
+        rules:{
+            name:{
+                required: true,
+                minlength: 3,
+            },
+            phone:{
+                required: true,
+            },
+        },
+        messages:{
+            name:{
+                required:'Введите Ваше имя',
+                minlength: 'Минимум 3 буквы'
+            },
+            phone:{
+              required: 'Введите Ваш телефон',
+            }
+        }
+    });
 });
