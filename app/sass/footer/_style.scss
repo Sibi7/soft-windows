@@ -177,9 +177,9 @@
       top: -10px;
       width: 41px;
       height: 44px;
-      background-image: url('../img/ruso-logo.png');
+      background: url('../img/ruso_logo.svg') no-repeat center center;
+      background-size: contain;
       transition: 200ms ease;
-
     }
     &:active {
       color: #fff;
@@ -191,7 +191,7 @@
       transition: 200ms ease;
       color: #ffb400;
       &:before {
-        background-image: url('../img/ruso-logo2.png');
+        background-image: url('../img/ruso_logo2.svg');
       }
     }
 
